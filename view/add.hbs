@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Records</title>
+    <style>
+      *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins';
+        background-color: #A3D4D1;
+      }
+      h1{
+        margin: 2rem;
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 600;
+        font-size: 3.5rem;
+        color: blueviolet;
+      }
+      .container{
+        padding: 1.5rem;
+        margin: 2rem;
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+      }
+      label,input{
+        margin-bottom: 1.5rem;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 600;
+        font-size: 25px;
+      }
+      .registerbtn{
+        padding: 1rem;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      .registerbtn:hover{
+        padding: 1.5rem;
+        background-color: aliceblue;
+        transition: 3ms ease-in-out;
+      }
+      a{
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 25px;
+      }
+      a:hover{
+        font-size: 30px;
+        transition: 3ms ease-in-out;
+      }
+    </style>
+</head>
+<body>
+  <h1>ADD STUDENT</h1>
+    <div class="container">
+       <form action="/addstudent">
+   
+
+    <label for="name"><b>Student name</b></label>
+    <input type="text" placeholder="Enter Name" name="name" id="name" required>
+    <br>
+    <label for="phn"><b>Phone no</b></label>
+    <input type="phone" placeholder="Enter Phone Number" name="phone" id="phone" required>
+    <br>
+    <label for="eml-id"><b>Email Id</b></label>
+    <input type="email" placeholder="Enter Email Id" name="email" id="email" required>
+    <br>
+     <label for="gen">Gender</label>
+     <input type="radio" name="gender" id="" value="Male"> Male
+     <input type="radio" name="gender" id=""  value="Female">  Female
+    <br>
+    <button type="submit" class="registerbtn">ADD STUDENT</button>
+  <br>
+  <br>
+  
+    <a href="./" style="color:black">BACK TO HOME PAGE</a> <br>
+     
+     {{#if mesg}}
+     <h1>Data Inserted</h1>
+     {{/if}}
+
+      {{#if checkmesg}}
+     <h1>Emailid or Phoneno already present!</h1>
+     {{/if}}
+</form>
+</div>
+</body>
+</html>
